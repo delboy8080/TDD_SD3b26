@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="TDD_SD3b26/TDD_SD3b26.vcxproj" Id="0752bd20-d6a1-46a8-8bd9-0c955fa83460" />
+  <Project Path="TestShoppingCart/TestShoppingCart.vcxproj" />
 </Solution>
