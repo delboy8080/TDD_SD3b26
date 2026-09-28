@@ -97,5 +97,27 @@ namespace TestShoppingCart
 			Assert::IsFalse(c.removeBook(""));
 			Assert::AreEqual(2, c.size());
 		}
+
+		TEST_METHOD(testGetSubtotalEmptyList)
+		{
+			Cart c;
+			Assert::AreEqual(0, c.size());
+			Assert::AreEqual(0.00, c.getSubTotal(), 0.01);
+		}
+		TEST_METHOD(testGetSubtotalOneBook)
+		{
+			Cart c;
+			c.AddBook(b1);
+			Assert::AreEqual(1, c.size());
+			Assert::AreEqual(6.99, c.getSubTotal(), 0.01);
+		}
+		TEST_METHOD(testGetSubtotalTwoBook)
+		{
+			Cart c;
+			c.AddBook(b1);
+			c.AddBook(b2);
+			Assert::AreEqual(2, c.size());
+			Assert::AreEqual(23.98, c.getSubTotal(), 0.01);
+		}
 	};
 }

@@ -44,3 +44,15 @@ bool Cart::removeBook(std::string title)
 	return false;
 	
 }
+
+double Cart::getSubTotal()
+{
+	double total=0;
+	std::list<Book*>::iterator it = bks.begin();
+	while (it != bks.end())
+	{
+		total += (*it)->price;
+		it++;
+	}
+	return total;
+}

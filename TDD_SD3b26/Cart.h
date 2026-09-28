@@ -9,5 +9,6 @@ public:
 	int size();
 	int AddAll(std::list<Book*> bs);
 	bool removeBook(std::string title);
+	double getSubTotal();
 };
 
